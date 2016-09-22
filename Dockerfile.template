@@ -1,0 +1,35 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-node:slim
+
+# Install apt deps
+RUN apt-get update && apt-get install -y \
+  build-essential \
+  python-dev   \
+  python-smbus \
+  python-imaging \
+  bluetooth \
+  bluez \
+  libbluetooth-dev \
+  libudev-dev \
+  i2c-tools && \
+  rm -rf /var/lib/apt/lists/*
+
+# Save source folder
+RUN printf "%s\n" "${PWD##}" > SOURCEFOLDER
+
+# Move to /usr/src/app
+WORKDIR /usr/src/app
+
+# Move package to filesystem
+COPY "$SOURCEFOLDER/app/package.json" ./
+
+# Install NodeJS dependencies via NPM
+RUN JOBS=MAX npm i --unsafe-perm --production && npm cache clean
+
+# Start app
+CMD ["bash", "/usr/src/app/start.sh"]
+
+# Move app to filesystem
+COPY "$SOURCEFOLDER/app" ./
+
+## uncomment if you want systemd
+ENV INITSYSTEM on
