@@ -10,5 +10,5 @@ Variable Name          | Default      | Description
 ---------------------- | ------------ | -----------------------------------------
 LED_MATRIX_I2C_ADDRESS | `0x70`       | the i2c address of the LED matrix
 LED_MATRIX_I2C_BUS     | `/dev/i2c-1` | the i2c bus the LED matrix is attached to
-ARTIKCLOUD_DEVICE_ID | `null`       | the i2c address of the LED matrix
-ARTIKCLOUD_DEVICE_TOKEN     | `null` | the i2c bus the LED matrix is attached to
+ARTIKCLOUD_DEVICE_ID | `null`       | the Artik Cloud device ID
+ARTIKCLOUD_DEVICE_TOKEN     | `null` | the Artik Cloud device token
