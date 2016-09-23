@@ -1,5 +1,5 @@
 # resin-ledmatrix-emoji
-Display custom 8x8 emojis via a simple web server on an Adafruit 8x8 I2C LED matrix backpack (ht16k33) and logs them on [Artik Cloud](https://docs.resin.io/integrations/artik/)
+Display custom 8x8 emojis via a simple web server on an Adafruit 8x8 I2C LED matrix backpack (ht16k33) and log them on [Artik Cloud](https://docs.resin.io/integrations/artik/)
 
 <https://shop.pimoroni.com/products/adafruit-mini-8x8-led-matrix-w-i2c-backpack>
 
