@@ -13,3 +13,4 @@ LED_MATRIX_I2C_ADDRESS | `0x70`       | the i2c address of the LED matrix
 LED_MATRIX_I2C_BUS     | `/dev/i2c-1` | the i2c bus the LED matrix is attached to
 ARTIKCLOUD_DEVICE_ID | `null`       | the Artik Cloud device ID
 ARTIKCLOUD_DEVICE_TOKEN     | `null` | the Artik Cloud device token
+WEB_SERVER_PORT | `80` | the port the webserver is exposed on
